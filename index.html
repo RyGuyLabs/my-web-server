@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>My First Website</title>
+</head>
+<body class="bg-gray-100 text-gray-800 font-inter antialiased flex items-center justify-center min-h-screen p-4">
+
+    <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md text-center">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Hello, World!</h1>
+        <p class="text-gray-600 mb-6">This is my very first website. I'm excited to get started with web development!</p>
+
+        <!-- A simple button with a fun interaction -->
+        <button id="myButton" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-full transition duration-300 transform hover:scale-105">
+            Click Me
+        </button>
+    </div>
+
+    <!-- JavaScript to handle the button click -->
+    <script>
+        document.getElementById('myButton').addEventListener('click', function() {
+            // Get the current text of the paragraph
+            const paragraph = document.querySelector('p');
+            const originalText = "This is my very first website. I'm excited to get started with web development!";
+            const newText = "You clicked the button! Great job! 🎉";
+
+            // If the text is original, change it. Otherwise, revert it.
+            if (paragraph.textContent === originalText) {
+                paragraph.textContent = newText;
+            } else {
+                paragraph.textContent = originalText;
+            }
+        });
+    </script>
+</body>
+</html>
